@@ -1,0 +1,100 @@
+#afiseaza un mesaj
+echo "Niste text"
+
+#afiseaza directorul curent print working directory
+pwd
+
+#afiseaza continutul directorului
+#-a toate fisierele din director
+#-l afiseaza cu drepturile de citire/scriere/executie pentru propietar, grupul propietar si ceilalti
+#utilizatori. r-read, w-write, x-execute
+ls
+
+#schimba directorul curent in director
+# . e o scurtatura pentru directorul curent
+# .. e o scurtatura pentru directorul parinte
+# de exemplu daca pwd afiseaza /home/student . este scurtatura pentru directorul student
+# .. este scurtatura pentru directorul parinte
+# ~ este o scurtatura pentru directorul home: /home/student echivalent cu C:\Documents and Settings\student
+# cd ~- sau cd - schimba catre ultimul director 
+cd director
+
+#creeaza un fisier gol
+touch nume_fisier
+
+#afiseaza continutul unui fisier
+cat nume_fisier
+
+#folosita pentru a copia un fisier
+#-r sau -R copiaza si continutul directorului
+cp cale_catre_fisier cale_noua
+
+#folosita pentru a muta un fisier
+mv nume_fisier nume_nou
+mv cale_director cale_noua_director
+
+#sterge un fisier
+#-r sau -R sterge directoarele recursiv
+#-f ignora fisierle non-existente
+#-i intreaba inainte de orice stergere
+rm nume_fisier
+rm -R nume_director
+
+#folosita pentru a creea un director
+#-p creeaza si directoarele intermediare care nu exista, spre exemplu in /home/student vrem sa creeam un alt
+#folder /home/student/folder/test
+mkdir -p /home/student/folder/test creeaza si /home/student/folder cat si folderul test
+mkdir nume_director
+
+#cauta fisierul respectiv
+find cale nume_fisier
+
+#afiseaza un tabel cu procesele existente
+top
+
+#afiseaza procesele existente
+ps aux
+
+#afiseaza interfetele network
+ifconfig
+
+> redirecteaza iesirea unui program echo "test" > test.txt
+< redirecteaza intrarea unui program program < fisier_cu_date.txt
+2> redirecteaza iesirea standard de erori (de exemplu fprintf(stderr, "mesaj"))
+
+nano -> editor de text in consola usor de folosit
+vim -> editor de text in consola cu functii mai complexe, dar mai greu de folosit la inceput
+tastati comanda vimtutor pentru un tutorial de vim
+
+#cauta in fisierul trimis ca argument sau, in lipsa, in intrarea standard secventa respectiva
+grep secventa_de_caractere fisier.txt
+
+| -> pipe face ca iesirea unui program sa fie intrarea urmatorului
+ls | grep nume
+
+#programeaza executia unei comenzi la un anumit interval de timp
+watch -n 1 echo "Salut"   -> va executa la fiecare secunda(numarul de dupa -n) comanda echo "salut"
+
+sudo comanda -> executa comanda cu drept de propietar; s-ar putea sa ceara parola de root
+
+#afiseaza informatii despre sistem
+uname -a
+
+#afiseaza informatii despre distributie
+cat /etc/issue
+
+#afiseaza informatii despre distributie
+lsb_release -a
+
+In principiu orice program are optiunea -h sau --h sau --help care afiseaza ce face aceasta si cum se foloseste.
+man program -> afiseaza o pagina de manual pentru program
+
+Daca sunteti pe Ubuntu si dati comenzile veti avea pagini de menu pentru unele bibilioteci c
+sudo apt-get install manpages-dev
+sudo apt-get install manpages-posix-dev
+
+#Afiseaza detalii legate de hard
+lshw
+
+#inchide aplicatia pe fereastra careia dati click
+xkill
