@@ -47,7 +47,7 @@ mkdir -p /home/student/folder/test creeaza si /home/student/folder cat si folder
 mkdir nume_director
 
 #cauta fisierul respectiv
-find cale nume_fisier
+find cale -name nume_fisier 
 
 #afiseaza un tabel cu procesele existente
 top
